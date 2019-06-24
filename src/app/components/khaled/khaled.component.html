@@ -1,5 +1,7 @@
-<h1>khaled Mohammad works!</h1>
-<h1>{{name}}</h1>
-<h1>{{lname}}</h1>
-<h1>{{age}}</h1>
-<h1>{{employee.name}},{{employee.lname}},{{employee.age}}</h1>
+<h1 class="myColor">khaled Mohammad</h1>
+<ul>
+<li *ngFor='let per of people ; let i = index'>
+{{i+1}}-{{per.name}},{{per.age}},{{per.id}}
+</li>
+</ul>
+ 
