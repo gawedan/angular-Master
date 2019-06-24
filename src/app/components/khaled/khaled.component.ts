@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./khaled.component.css']
 })
 export class KhaledComponent implements OnInit {
-name = "Khaled";
-lname="Mohammad";
-age=4;
+name:string = "Khaled";
+lname:string = "Mohammad";
+age:number = 4;
 employee={name:"Khaled",lname:"Mohammad",age:36};
   constructor() { 
     this.name="Ahmed";
