@@ -1,7 +1,16 @@
 <h1 class="myColor">khaled Mohammad</h1>
-<ul>
-<li *ngFor='let per of people ; let i = index'>
-{{i+1}}-{{per.name}},{{per.age}},{{per.id}}
-</li>
-</ul>
- 
+
+<h2 class="myColor" *ngIf='!false'>{{person.name}}</h2>
+<h2 class="myColor2" *ngIf='true'>{{person.name}}</h2>
+<h2 class="myColor1" *ngIf='isKhaled'>{{person.name}}</h2>
+<h2 class="myColor1" *ngIf='!isKhaled ; else another'>{{person.name}}</h2>
+<h3 ><ng-template #another>Ahmed </ng-template></h3>
+<h2 class="myColor1"> {{!isKhaled ? person.name : "Ahmed"}}</h2>
+
+<!-- Switch  -->
+<div [ngSwitch]="myName">
+<p class="myColor1"  *ngSwitchCase="'khaled'">My Name Khaled</p>
+<p class="myColor1"  *ngSwitchCase="'Ahmed'">My Name Ahmed</p>
+<p class="myColor"  *ngSwitchCase="'Mohammad'">My Name Mohammad</p>
+<p class="myColor"  *ngSwitchDefault>No Name</p>
+</div>
