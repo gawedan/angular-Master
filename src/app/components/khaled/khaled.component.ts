@@ -9,11 +9,15 @@ export class KhaledComponent implements OnInit {
 name = "Khaled";
 lname = "Mohammad";
 age = 4;
+adress:string[];
+infos:[string,number,boolean];
 employee={name:"Khaled",lname:"Mohammad",age:36};
   constructor() { 
     this.name="Ahmed";
     this.changeName();
     this.changeAge();
+    this.adress=["langemarck","an der Gete","Syria"];
+    this.infos=["khaled",2,true];
   }
 
   ngOnInit() {
