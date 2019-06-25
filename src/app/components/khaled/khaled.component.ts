@@ -1,12 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import {Persons} from './Persons';
 @Component({
   selector: 'app-khaled',
   templateUrl: './khaled.component.html',
   styleUrls: ['./khaled.component.css']
 })
 export class KhaledComponent implements OnInit {
-myImage:string="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MzAvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzExMTA1NzIxNTkuanBn";
-  constructor() {}
+  totalClass = {};
+myClassCss = true;
+myClassCss2 = true;
+salary=4000;
+birthday=new Date(1983,9,17);
+
+  constructor() {
+    this.classFunction();
+  }
   ngOnInit() {}
+
+  classFunction(){
+    this.totalClass = {
+    myClass:this.myClassCss,
+    myClass2:this.myClassCss2
+    }
+  }
  }

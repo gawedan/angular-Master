@@ -1,7 +1,10 @@
-<h1 class="myColor">khaled Mohammad</h1>
+<h1 [ngClass] = totalClass> khaled Mohammad</h1>
 
-<div>
-<img src="{{myImage}}">
-<img [src]="myImage">
-<img bind-src="myImage">
-</div>
+<!-- Pipe -->
+<h3> {{ 'KHALED Mohammad' | uppercase }}</h3>
+<h3> {{ 'KHALED Mohammad' | lowercase }}</h3>
+<h3> {{ birthday }}</h3>
+<h3> {{ birthday | date }}</h3>
+<h3> {{ birthday | date | uppercase}}</h3>
+<h3> {{ birthday | date:"MM-dd-yyyy" }}</h3>
+<h3> {{ salary | currency:"GPB":"" }}</h3>

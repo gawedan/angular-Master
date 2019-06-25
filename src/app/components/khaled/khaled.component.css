@@ -1,9 +1,11 @@
 .myColor{
-  color: aqua;
+  color: red;
+  text-transform: capitalize;
 }
-.myColor1{
+.myClass{
+  font-style: italic;
+  font-size: 60px;
+}
+.myClass2{
   color: blue;
-}
-.myColor2{
-  color: brown ;
 }
