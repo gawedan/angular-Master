@@ -1,0 +1,46 @@
+ 
+ <br>
+ <div class="container">
+ <form novalidate #fo="ngForm" (ngSubmit)= mySubmit1(fo)>
+  <div class="form-group">
+    <label for="name">First Name:</label>
+    <input type="text" [(ngModel)]='user.name' name="name" class="form-control" 
+    #myName="ngModel" required minlength="4" id="name">
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name:</label>
+    <input type="text" [(ngModel)]='user.lname' name="lname" class="form-control" 
+    #myLname="ngModel" required minlength="4" id="lname">
+  </div>
+   <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="number" [(ngModel)]='age' name="age" class="form-control" 
+    #myAge="ngModel" required minlength="2" id="age">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <div *ngIf="myName.errors?.required && myName.touched" class="alert alert-danger"> First Name ist required</div>
+ <div *ngIf="myName.errors?.minlength && myName.touched" class="alert alert-danger"> Min ist 4</div>
+   <div *ngIf="myLname.errors?.required && myLname.touched" class="alert alert-danger"> Last Name ist required</div>
+  <div *ngIf="myLname.errors?.minlength && myLname.touched" class="alert alert-danger"> Min ist 4</div>
+  <div *ngIf="myAge.errors?.minlength && myAge.touched" class="alert alert-danger"> Age required</div>
+</form>
+</div>
+<br>
+<div>
+<h3>{{verfiyForm.name}}-{{verfiyForm.lname}}{{verfiyForm.age}}</h3>
+</div>
+<br><br><br><br>
+
+ <div class="container">
+ <form (submit)= mySubmit()>
+  <div class="form-group">
+    <label for="name">add to Cart:</label>
+    <input type="text" [(ngModel)]='name' name="name" class="form-control" id="name">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<div *ngFor="let itme of myShop">
+<h3>{{itme}}</h3>
+</div>
