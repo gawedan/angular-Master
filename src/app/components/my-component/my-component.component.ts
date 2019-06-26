@@ -6,11 +6,10 @@ import { DataServiceService } from '../../service/data-service.service';
   styleUrls: ['./my-component.component.css']
 })
 export class MyComponentComponent implements OnInit {
-  users:any[]=[];
-
-  constructor(dataService:DataServiceService) { 
-    dataService.getUsers().subscribe(users => {
-      this.users.push(users);
+  users:any[];
+  constructor(public dataService:DataServiceService) { 
+    this.dataService.getPerson().subscribe(data => {
+      this.users=data;
     });
   }
 
